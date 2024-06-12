@@ -12,5 +12,18 @@
  * @returns {number} The sum of numbers that meet the criteria.
  */
 export function sumSelective(numbers) {
-  // TODO
+  let result = 0
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (
+      (numbers[i] % 2 === 0) !== (numbers[i] > 10)
+    ) {
+      result += numbers[i]
+    }
+  }
+
+  return result
 }
+
+let answer = sumSelective([8, 9, 10, 11, 12])
+console.log(answer)
